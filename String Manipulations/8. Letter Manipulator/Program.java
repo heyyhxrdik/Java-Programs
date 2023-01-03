@@ -45,7 +45,7 @@ public class Program {
 
         }
 
-        System.out.println(String.valueOf(ch));
+        System.out.println(">>> Manipulated string: "+String.valueOf(ch));
     }
 
     public static void main(String[] args) {
