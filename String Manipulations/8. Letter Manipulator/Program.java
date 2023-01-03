@@ -11,7 +11,7 @@ public class Program {
     void inputString() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a sentence: ");
+        System.out.print("\nEnter a sentence: ");
         sentence = sc.nextLine();
         sentence = sentence.toUpperCase();
 
@@ -29,23 +29,25 @@ public class Program {
                 if (ch[i] == 'A' || ch[i] == 'E' || ch[i] == 'I' || ch[i] == 'O' || ch[i] == 'U') {
                     ch[i] = ch[i];
                 } else {
-                    // Get the previous character
-                    char chr = (char) ((int) (ch[i]) - 1);
                     // if the previous character is any vowel then convert the chracter into its
                     // next character
-                    if (chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U') {
+                    if ((char) ((int) (ch[i]) - 1) == 'A' || (char) ((int) (ch[i]) - 1) == 'E'
+                            || (char) ((int) (ch[i]) - 1) == 'I' || (char) ((int) (ch[i]) - 1) == 'O'
+                            || (char) ((int) (ch[i]) - 1) == 'U') {
                         ch[i] = (char) ((int) (ch[i]) + 1);
                         // if the previous character is not a vowel then convert the character into its
                         // previous character
-                    } else if (chr != 'A' || chr != 'E' || chr != 'I' || chr != 'O' || chr != 'U') {
-                        ch[i] = chr;
+                    } else if ((char) ((int) (ch[i]) - 1) != 'A' || (char) ((int) (ch[i]) - 1) != 'E'
+                            || (char) ((int) (ch[i]) - 1) != 'I' || (char) ((int) (ch[i]) - 1) != 'O'
+                            || (char) ((int) (ch[i]) - 1) != 'U') {
+                        ch[i] = (char) ((int) (ch[i]) - 1);
                     }
                 }
             }
 
         }
 
-        System.out.println(">>> Manipulated string: "+String.valueOf(ch));
+        System.out.println("\n>>> Manipulated string: " + String.valueOf(ch));
     }
 
     public static void main(String[] args) {
